@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""news-image-20261117 entry program.
+"""news-image-20261117 entry program (V2).
 
 Copies the bundled front-page image (entry.png, next to this file) to
 $MAKEFUN_OUTPUT_DIR/entry.png, defaulting to /output/entry.png.
