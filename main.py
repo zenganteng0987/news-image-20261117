@@ -14,6 +14,9 @@ from pathlib import Path
 
 def main() -> int:
     source = Path(__file__).resolve().parent / "entry.png"
+    if not source.is_file():
+        print(f"error: entry image not found: {source}", file=sys.stderr)
+        return 1
     out_dir = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
     out_dir.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(source, out_dir / "entry.png")
